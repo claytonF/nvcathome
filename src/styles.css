@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    color: white;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fbfbe+0,449a97+100 */
+    background: #5fbfbe; /* Old browsers */
+    background: -moz-linear-gradient(top, #5fbfbe 0%, #449a97 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #5fbfbe 0%,#449a97 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #5fbfbe 0%,#449a97 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fbfbe', endColorstr='#449a97',GradientType=0 ); /* IE6-9 */
+
+}
+
+.mdl-layout__header {
+    box-shadow: 0 0 0 0;
+    background-color: transparent;
+}
+.mdl-layout__content {
+    padding:20px;
+}
+.mdl-layout {
+}
+
+.search-container {
+    padding: 0px 20px 0;
+}
+
+input {
+    width:100%;
+    border:0px;
+    padding:10px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    border-radius:100px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
+}
+input:focus::-moz-placeholder{
+    color: transparent!important;
+}
+input:focus:-moz-placeholder{
+    color: transparent!important;
+}
+
+ul a {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+ul a i {
+    float: right;
+    line-height: 1.5rem;
+}
+
+ul {
+    padding-left: 0px;
+    margin: 0px;
+}
+
+ul li {
+   list-style-type: none; 
+}
+
+.fade-overlay {
+    position: fixed;
+    display: block;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5fbfbe+0,449a97+100&0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(95,191,190,0) 0%, rgba(68,154,151,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(95,191,190,0) 0%,rgba(68,154,151,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(95,191,190,0) 0%,rgba(68,154,151,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005fbfbe', endColorstr='#449a97',GradientType=0 ); /* IE6-9 */
+    width: 100%;
+    height: 20%;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.feelings-list {
+    float: left;
+    width:45%;
+    margin-right:5%
+}
+.needs-list {
+    float: right;
+    width: 50%;
+}
+
+h4 {
+    text-align: center;
+    margin-top:15px;
+}
+
+.feelings-list h5, .needs-list h5 {
+    font-style: italic;
+    border-bottom:1px solid white;
+    padding-bottom:10px;
+}
+
+.ident {
+    z-index: 3;
+    width:100%;
+    text-align: center;
+    padding: 0 0 5px 0;
+    font-size: 0.7rem;
+    position: fixed;
+    bottom: 0px;
+}
+
+.back-link {
+    position: absolute;
+    color: white;
+    margin-top: 10px;
+}
+.back-link i {
+    font-size: 38px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    ul a i {
+        display: none;
+        visibility: hidden;
+
+    }
+    ul a {
+        text-align: center;
+    }
+    
+}

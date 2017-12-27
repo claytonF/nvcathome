@@ -1,0 +1,29 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      
+    </div>
+    <div class="search-container">
+      <input type="text" [(ngModel)]="queryString" id="search" placeholder="How do you feel?">
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" routerLink="/" routerLinkActive="active">Home</a>
+      <a class="mdl-navigation__link" routerLink="/jtn" routerLinkActive="active">Judgement converter</a>
+      <a class="mdl-navigation__link" routerLink="/ftn" routerLinkActive="active">Feeling converter</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <ul>
+        <li *ngFor="let initialfeeling of initialfeelings | SearchFilterPipe: queryString"><a [routerLink]="['/fn/', initialfeeling.id]">{{initialfeeling.title}}<i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    </div>
+  </main>
+  <div class="fade-overlay"></div>
+  <div class="ident">NVC @ work</div>
+</div>
+
+
+

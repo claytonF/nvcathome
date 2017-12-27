@@ -1,16 +1,16 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService } from "./shared/services/data.service";
-import { Observable } from "rxjs/Observable";
+import { DataService } from "../shared/services/data.service";
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: "app-ftn",
+  templateUrl: "./ftn.component.html",
+  styleUrls: ["./ftn.component.css"]
 })
-export class AppComponent implements OnInit {
+export class FtnComponent implements OnInit {
   queryString;
   onlineFlag = navigator.onLine;
   results;
+  storeData;
   initialfeelings;
   constructor(private DataService: DataService) {
     if (this.onlineFlag) {

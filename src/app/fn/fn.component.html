@@ -1,0 +1,27 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="">
+            <a class="back-link" (click)="navBack()"><i class="material-icons">chevron_left</i></a>
+            <h4>{{initialfeelings.title}}</h4>
+      </div>
+
+    </header>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <ul class="feelings-list">
+          <li><h5>Feelings</h5></li>
+          <li *ngFor="let feeling of initialfeelings.feelings">{{feeling}}</li>
+        </ul>
+        <ul class="needs-list">
+            <li><h5>Needs</h5></li>
+            <li *ngFor="let need of initialfeelings.needs">{{need}}</li>
+        </ul>
+      </div>
+    </main>
+    <div class="fade-overlay"></div>
+    <div class="ident">NVC @ work</div>
+  </div>
+  
+  
+  
+  
