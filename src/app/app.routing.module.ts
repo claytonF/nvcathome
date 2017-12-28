@@ -8,6 +8,11 @@ import { JnComponent } from "./jn/jn.component";
 
 const routes: Routes = [
   {
+    path: "",
+    component: FtnComponent,
+    pathMatch: "full"
+  },
+  {
     path: "ftn",
     component: FtnComponent,
     pathMatch: "full"
