@@ -1,0 +1,33 @@
+{
+  "version": "1514396906",
+  "judgement": [
+    {
+      "id": 1,
+      "title": "aggressive",
+      "initialFeelings": [
+        "attacked",
+        "belittled",
+        "bullied",
+        "cornered",
+        "intimidated",
+        "victimized",
+        "violated",
+        "threatened"
+      ],
+      "feelings": [
+        "angry",
+        "sad",
+        "resentment",
+        "frustrated",
+        "concerned"
+      ],
+      "needs": [
+        "safety", 
+        "autonomy", 
+        "choice", 
+        "consideration", 
+        "respect", 
+        "ease"]
+    }
+  ]
+}
