@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.DataService.initialise();
     console.log(this.onlineFlag);
     if (this.onlineFlag) {
       this.results.subscribe(res => {

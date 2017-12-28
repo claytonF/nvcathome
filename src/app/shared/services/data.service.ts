@@ -4,16 +4,47 @@ import "rxjs/add/operator/map";
 
 @Injectable()
 export class DataService {
-  private _url: string = "/src/assets/data/data.json";
+  private _url: string = "/assets/data/data.json";
   private storedResponse;
+  private dataVersion;
   private retrievedResponse;
   private onlineFlag = navigator.onLine;
   constructor(private _http: Http) {}
 
+  initialise() {
+  
+
+    if (this.onlineFlag) {
+      console.log(this.retrieveData());
+      if(this.retrieveData() !== null) {
+        console.log();
+        // check data date
+        this.retrieveData();
+        this._http.get(this._url).map(res => res.json()).subscribe(
+          val => {
+            this.dataVersion = val.version;
+            console.log(this.dataVersion);
+            if (this.retrievedResponse.version !== this.dataVersion) {
+              this.getData();
+            }
+          }
+
+        );
+        
+      }
+      else {
+        // store data
+        this.getData();
+      }
+    }
+    else return false;
+
+  }
+
   getData() {
-    console.log(this.onlineFlag);
-    console.log(this.retrieveData());
-    console.log(this._url);
+    //console.log(this.onlineFlag);
+    //console.log(this.retrieveData());
+    //console.log(this._url);
 
     /*
     When first load app

@@ -19,34 +19,13 @@ export class FnComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location
   ) {
-    if (this.onlineFlag) {
-      this.results = this.DataService.getData();
-    } else {
-      this.results = this.DataService.retrieveData();
-    }
-  }
-
-  ngOnInit() {
-    console.log("test");
-    console.log(this.onlineFlag);
-    let id = this.route.snapshot.params["id"];
+    let id = this.route.snapshot.params["id"]
     id = id - 1;
-    console.log(id);
-    if (this.onlineFlag) {
-      //this.results.subscribe(res => {
-        this.initialfeelings = this.DataService.retrieveData();
-        this.initialfeelings = this.initialfeelings.initialfeelings[id];
-        console.log(this.initialfeelings);
-        console.log("found stuff");
-      //});
-    } else {
-      this.initialfeelings = this.results;
-      this.initialfeelings = this.initialfeelings.initialfeelings[id];
-      console.log(this.initialfeelings);
-    }
+    this.initialfeelings = this.DataService.retrieveData();
+    this.initialfeelings = this.initialfeelings.initialfeelings[id];
 
-    
   }
+  ngOnInit() {}
 
   navBack() {
     this.location.back();

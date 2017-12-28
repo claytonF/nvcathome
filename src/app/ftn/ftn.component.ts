@@ -10,28 +10,14 @@ export class FtnComponent implements OnInit {
   queryString;
   onlineFlag = navigator.onLine;
   results;
-  storeData;
   initialfeelings;
   constructor(private DataService: DataService) {
-    if (this.onlineFlag) {
-      this.results = this.DataService.getData();
-    } else {
-      this.results = this.DataService.retrieveData();
-    }
+
+    this.initialfeelings = this.DataService.retrieveData();
+    this.initialfeelings = this.initialfeelings.initialfeelings;
   }
 
-  ngOnInit() {
-    console.log(this.onlineFlag);
-    if (this.onlineFlag) {
-      this.results.subscribe(res => {
-        this.initialfeelings = this.DataService.retrieveData();
-        this.initialfeelings = this.initialfeelings.initialfeelings;
-      });
-    } else {
-      this.initialfeelings = this.results;
-      this.initialfeelings = this.initialfeelings.initialfeelings;
-    }
-  }
+  ngOnInit() {}
 
   ngOnDestroy() {
     
