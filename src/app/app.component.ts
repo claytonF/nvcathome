@@ -10,9 +10,11 @@ import { Observable } from "rxjs/Observable";
 export class AppComponent implements OnInit {
   queryString;
   onlineFlag = navigator.onLine;
+  
   results;
   initialfeelings;
   constructor(private DataService: DataService) {
+    console.log(this.onlineFlag);
     if (this.onlineFlag) {
       this.results = this.DataService.getData();
     } else {
